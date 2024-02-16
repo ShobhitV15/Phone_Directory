@@ -36,13 +36,14 @@ class PhoneDirectory extends Component {
         return (
             // <AddSubscriber addSubscriberHandler={this.addSubscriberHandler} />
             // <ShowSubscribers subscribersList={this.state.subscribersList} />
-
-            <Router>
+             <>
+            <Router> 
                 <div className='main-container'>
                 <Route exact path='/' render={(props)=><ShowSubscribers {...props} subscribersList={this.state.subscribersList}/>}/>
                 <Route exact path='/add' render={(props)=><AddSubscriber {...props} addSubscriberHandler={this.state.addSubscriberHandler}/>}/>
                 </div>
             </Router>
+            </>
         )
     }
 }
