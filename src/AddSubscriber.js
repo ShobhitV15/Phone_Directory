@@ -22,6 +22,7 @@ class AddSubscriber extends Component{
         e.preventDefault();
         this.props.addSubscriberHandler(this.state);
         this.setState({id: 0 , name: '', phone: ''});
+        this.setState.history.push("/");
     }
     render(){
         const {name,phone}=this.state;
@@ -29,7 +30,7 @@ class AddSubscriber extends Component{
             <div>
                 <Header header="Add Subscriber"/>
                 <div className="component-body-container">
-                   <Link to="/"> <button className="custom-btn">
+                   <Link to="/addSubscriber"> <button className="custom-btn">
                         Back
                     </button></Link>
                     <form className="subscriber-form" onSubmit={this.onFormSubmitted.bind(this)}>
